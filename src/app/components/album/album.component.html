@@ -1,0 +1,20 @@
+<h2> Album Details</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th> S.No </th>
+            <th> userId </th>
+            <th> id </th>
+            <th> title</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let album of albumData; let i=index">
+           <td>{{i+1}}</td>
+           <td>{{album.userId}}</td>
+           <td>{{album.id}}</td>
+           <td>{{album.title}}</td> 
+        </tr>
+    </tbody>
+</table>

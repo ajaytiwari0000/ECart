@@ -1,0 +1,7 @@
+<h2> Latest Posts </h2>
+<button (click)="getPosts()"> Get Posts </button>
+<div *ngFor="let post of postData">
+    <h4> {{post.title}} </h4>
+    <article> {{post.body}}</article>
+    <hr/>
+</div>

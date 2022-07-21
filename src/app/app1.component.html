@@ -1,0 +1,31 @@
+<h2> Welcome to {{title}}</h2>
+<input type="text" [(ngModel)]="title"/><br/>
+<div *ngIf="courses.length>0 else err">
+  <h4> Courses</h4>
+  <ul>
+    <li *ngFor="let c of courses"> {{c}}</li>
+ </ul>
+</div>
+<ng-template #err> No courses found</ng-template>
+<img [src]="imgUrl"/>
+<hr/>
+<table border="1">
+  <thead>
+    <tr>
+      <th> S.no</th>
+      <th> Name</th>
+      <th> Age</th>
+      <th> City</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of empData; let i=index">
+       <td>{{i+1}}</td>
+       <td>{{emp.name}}</td>
+       <td>{{emp.age}}</td>
+       <td>{{emp.city}}</td>
+    </tr>
+  </tbody>
+</table>
+<hr/>
+<button (click)="abc()"> Click Here </button>
